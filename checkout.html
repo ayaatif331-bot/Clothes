@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f2c38b;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .checkout-container {
+            display: flex;
+            gap: 30px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        /* Left side */
+        .checkout-form {
+            flex: 2;
+        }
+
+        .checkout-form h2 {
+            margin-bottom: 20px;
+        }
+
+        .checkout-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .checkout-form input {
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .payment {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .checkout-form button {
+            padding: 14px;
+            background-color: #b08968;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .checkout-form button:hover {
+            background-color: #9c6644;
+        }
+
+        /* Right side */
+        .order-summary {
+            flex: 1;
+            background: #f7ede2;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .order-summary h2 {
+            margin-bottom: 15px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .total {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            font-size: 18px;
+        }
+
+        .delivery {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="checkout-container">
+
+
+        <div class="checkout-form">
+            <h2>Billing Details</h2>
+
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="text" placeholder="Phone Number" required>
+                <input type="text" placeholder="City" required>
+                <input type="text" placeholder="Address" required>
+
+                <h3>Payment Method</h3>
+                <div class="payment">
+                    <label><input type="radio" name="pay" checked> Cash on Delivery</label>
+                    <label><input type="radio" name="pay"> Credit Card</label>
+                </div>
+
+                <button type="submit">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
